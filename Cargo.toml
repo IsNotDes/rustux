@@ -1,0 +1,50 @@
+[package]
+name = "rustux"
+version = "0.1.0"
+edition = "2021"
+authors = ["RustUX Team"]
+description = "A SuperTux remake written in Rust"
+license = "GPL-3.0"
+
+[dependencies]
+# Graphics and windowing
+sdl2 = "0.37"
+# Image loading
+image = "0.25"
+# Math utilities
+glam = "0.27"
+# Serialization for level data
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+# Random number generation
+rand = "0.8"
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+# Logging
+log = "0.4"
+env_logger = "0.11"
+# Configuration
+toml = "0.8"
+# HTTP client for downloading assets
+reqwest = { version = "0.12", features = ["json"] }
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+# URL parsing
+url = "2.5"
+
+[dev-dependencies]
+# Testing utilities
+approx = "0.5"
+
+[[bin]]
+name = "rustux"
+path = "src/main.rs"
+
+[[bin]]
+name = "download_assets"
+path = "src/bin/download_assets.rs"
+
+[[bin]]
+name = "test_sprites"
+path = "src/bin/test_sprites.rs"

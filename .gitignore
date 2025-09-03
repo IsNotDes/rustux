@@ -1,0 +1,24 @@
+# Rust
+/target/
+Cargo.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Game data (will be added later)
+/data/
+/assets/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
